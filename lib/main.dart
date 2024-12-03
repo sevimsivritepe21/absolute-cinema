@@ -17,7 +17,7 @@ import 'movie_list.dart';
 import 'homepage.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); // Bu satır, framework'ün başlatılmasını garanti eder
+  WidgetsFlutterBinding.ensureInitialized(); // framework
   runApp(MyApp());
 }
 
@@ -42,17 +42,17 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
-  late TabController _tabController; // null olamaz, sonradan başlatılacak
+  late TabController _tabController; // null olamaz, sonradan baslatilacak
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this); // TabController burada başlatılıyor
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    _tabController.dispose(); // bellek sızıntılarını önler
+    _tabController.dispose(); // bellek sizintilarıni engeller
     super.dispose();
   }
 
@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         ],
 
         bottom: TabBar(
-          controller: _tabController, // TabController burada kullanılıyor
+          controller: _tabController, 
           tabs: [
 
             Tab(
@@ -136,11 +136,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
 
 
-//    YAN MENUUUUU START, farklı dosyaya taşınacak
+//    YAN MENUUUUU START, dosyaya tasinacak
 //    YAN MENUUUUU
 drawer: Drawer(
   backgroundColor: Color.fromRGBO(25, 23, 23, 0.95),
-  child: Builder( // Burada Builder kullanarak context oluşturuyoruz
+  child: Builder( 
     builder: (context) => ListView(
       padding: EdgeInsets.zero,
       children: <Widget>[
@@ -152,7 +152,7 @@ drawer: Drawer(
               fit: BoxFit.cover, 
             ),
           ),
-          child: Center( // Yazıyı ortalamak için Center widget'ı kullandık
+          child: Center( 
             child: Text(
               ' ',
               style: GoogleFonts.oswald(
@@ -167,9 +167,9 @@ drawer: Drawer(
         ),
 
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0), // Dikey ve yatayda boşluk
+          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0), 
           leading: Icon(Icons.co_present_sharp, color: Color.fromARGB(255, 218, 212, 181), size: 17),
-          title: Center( // Yazıyı yatayda ortalamak için Center widget'ı
+          title: Center(
             child: Text(
               'Sign In',
               style: GoogleFonts.silkscreen(
@@ -181,7 +181,7 @@ drawer: Drawer(
 
 
               onTap: () {
-                Navigator.pop(context); // Drawer'ı kapatmak için
+                Navigator.pop(context); 
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => loginPage()),
@@ -193,9 +193,9 @@ drawer: Drawer(
         ),
 
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0), // Dikey ve yatayda boşluk
+          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0), 
           leading: Icon(Icons.group_add_sharp, color: Color.fromARGB(255, 218, 212, 181), size: 17),
-          title: Center( // Yazıyı yatayda ortalamak için Center widget'ı
+          title: Center(
             child: Text(
               'Register',
               style: GoogleFonts.silkscreen(
@@ -207,7 +207,7 @@ drawer: Drawer(
 
 
               onTap: () {
-                Navigator.pop(context); // Drawer'ı kapatmak için
+                Navigator.pop(context); 
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => registerPage()),
@@ -221,9 +221,9 @@ drawer: Drawer(
 
 
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0), // Dikey ve yatayda boşluk
+          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0),
           leading: Icon(Icons.web_stories_rounded, color: Color.fromARGB(255, 218, 212, 181), size: 17),
-          title: Center( // Yazıyı yatayda ortalamak için Center widget'ı
+          title: Center( 
             child: Text(
               'Lists',
               style: GoogleFonts.silkscreen(
@@ -234,7 +234,7 @@ drawer: Drawer(
 
 
               onTap: () {
-                Navigator.pop(context); // Drawer'ı kapatmak için
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MovieList()),
@@ -250,7 +250,7 @@ drawer: Drawer(
 
 
 
-//  TAB İÇERİKLERİ BURAYA YAZILACAAAKK!!!!!
+//  TAB ICERIKLERI
 body: TabBarView(
   controller: _tabController,
   children: [
