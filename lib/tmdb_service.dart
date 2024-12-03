@@ -32,7 +32,7 @@ class TmdbService {
   }
 
 
-//      RATING ANF GENRE
+//      RATING ANd GENRE
 Future<Map<String, dynamic>> fetchMoviesByGenreAndRating(int genreId, double minRating) async {
   final url = Uri.parse('$baseUrl/discover/movie?api_key=$apiKey&sort_by=popularity.desc&with_genres=$genreId&vote_average.gte=$minRating');
   
@@ -71,7 +71,7 @@ Future<Map<String, dynamic>> fetchList(int listId) async {
 }
 
 
-  // Belirli bir filme ait detayları getirir
+  // MOVIE INFORMATION
   Future<Map<String, dynamic>> fetchMovieDetails(int movieId) async {
     final url = Uri.parse('$baseUrl/movie/$movieId?api_key=$apiKey');
     
