@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'tmdb_service.dart'; // API servis dosyanız
+import 'tmdb_service.dart';
 import 'in_movie_list.dart';
 
 class MovieList extends StatefulWidget {
