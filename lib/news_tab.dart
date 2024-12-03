@@ -21,7 +21,7 @@ class _MovieNewsPageState extends State<MovieNewsPage> {
   }
 
   Future<void> fetchMovieNews() async {
-    final String apiKey = '2bd77b47d7b04fea90fea41059807e66'; // News API Anahtarınızı buraya ekleyin
+    final String apiKey = '2bd77b47d7b04fea90fea41059807e66'; 
     final String apiUrl = 'https://newsapi.org/v2/everything?q=movie&language=en&pageSize=35&apiKey=$apiKey';
 
     try {
@@ -46,11 +46,11 @@ class _MovieNewsPageState extends State<MovieNewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 42, 31, 26),  // Arka plan rengini kahverengi yapar
+      backgroundColor: Color.fromARGB(255, 42, 31, 26), 
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
-              padding: EdgeInsets.zero, // TabBar ile ilk haber arasındaki boşluğu kaldırır
+              padding: EdgeInsets.zero,
               itemCount: articles.length,
               itemBuilder: (context, index) {
                 final article = articles[index];
@@ -61,18 +61,18 @@ class _MovieNewsPageState extends State<MovieNewsPage> {
 
 
                 return Card(
-                  margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8), // Kartların dış boşluğu
-                  color: Colors.brown[100], // Kart arka plan rengi
+                  margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8), 
+                  color: Colors.brown[100], 
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(7), // Kart kenarlarında radius
+                    borderRadius: BorderRadius.circular(7), 
                   ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // Başlıkları sola hizalar
+                    crossAxisAlignment: CrossAxisAlignment.start, 
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(7), // Görselin sol üst köşesi yuvarlatılır
-                          topRight: Radius.circular(7), // Görselin sağ üst köşesi yuvarlatılır
+                          topLeft: Radius.circular(7),
+                          topRight: Radius.circular(7),
                         ),
                         child: Image.network(
                           imageUrl,
@@ -94,11 +94,6 @@ class _MovieNewsPageState extends State<MovieNewsPage> {
                     ],
                   ),
                   );
-
-
-
-
-
               },
             ),
     );
