@@ -9,11 +9,9 @@ class main_Homepage extends StatelessWidget {
   Widget build(BuildContext context){
       return Center(
         child: Container(
-          color: Color.fromARGB(255, 18, 17, 17), // Arka plan rengi
+          color: Color.fromARGB(255, 18, 17, 17), 
 
           padding: EdgeInsets.only(top: 70.0),
-          //  taşmaya sebep olduğu gerekçesiyle kapatıldı :))
-          //padding: EdgeInsets.all(60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
 
@@ -31,7 +29,6 @@ class main_Homepage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 
-                // KORKU LİSTESİNE YÖNLENDR
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 25, right: 8),
@@ -57,7 +54,6 @@ class main_Homepage extends StatelessWidget {
             
               Container(
                 margin: EdgeInsets.only(top: 5),
-                //color: Color.fromARGB(255, 34, 29, 29),
                 height: 150,
 
                 child: Row(
@@ -127,4 +123,3 @@ class main_Homepage extends StatelessWidget {
       );
   }
 }
-//    homePage end.
