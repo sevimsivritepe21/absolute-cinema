@@ -25,7 +25,7 @@ String apiKey = '9819bd3a1e544642d499ce90a5733109';
 
         allItems.addAll(items);
 
-        // Eğer dönen öğe sayısı 20'den azsa son sayfaya gelinmiştir
+        // eger donen oğe sayisi 20den azsa son sayfayadayiz
         if (items.length < 20) {
           isLastPage = true;
         } else {
@@ -60,7 +60,6 @@ class MoviesListPage extends StatelessWidget {
       ),
   body: Container(
     color: Color.fromARGB(255, 232, 208, 179),
-    //padding: const EdgeInsets.only(top: 5.0), // Üst boşluk
     child: FutureBuilder<List<dynamic>>(
       future: fetchList2(listId),
       builder: (context, snapshot) {
